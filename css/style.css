@@ -84,17 +84,18 @@ td { vertical-align: top; }
     text-shadow: 3px 3px 1px rgba(93, 84, 84, 0.5);
   }
 
-   #page-wrap {
-      margin: 3em auto;
-      width: 80%;
-      text-align: center;
-   }
+  #page-wrap {
+    margin: 3em auto;
+    width: 80%;
+    text-align: center;
+  }
 
-   img.circle-image {
+  img.circle-image {
     border-radius: 50%;
-     -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.45);
-     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.45);
-   }
+    -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.45);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.45);
+    max-width: 100%;
+  }
 
 
 
