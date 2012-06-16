@@ -94,10 +94,6 @@ td { vertical-align: top; }
     margin: 0.6em 0 0.3em;
   }
 
-  .upcase {
-    text-transform: uppercase;
-  }
-
   #page-wrap {
     margin: 3em auto;
     width: 80%;
