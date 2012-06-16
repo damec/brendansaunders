@@ -79,6 +79,15 @@ td { vertical-align: top; }
     color: #CAB6B5;
   }
 
+  body a {
+    text-decoration: none;
+    color: #76B0D8;
+  }
+
+  body a:visited {
+    color: #7DA0B8;
+  }
+
   h1.tk-cubano {
     font-size: 4.5em;
     text-shadow: 3px 3px 1px rgba(93, 84, 84, 0.5);
@@ -118,7 +127,7 @@ td { vertical-align: top; }
   .work-examples li, .tools li {
     float: left;
     list-style: none;
-    margin: 2.35%;
+    margin: 1.175%;
   }
 
   .work-examples li {
@@ -129,28 +138,20 @@ td { vertical-align: top; }
     max-width: 100%;
   }
 
-  .work-examples li:nth-child(odd){
-    margin-left: 0;
-  }
-
-  .work-examples li:nth-child(even) {
-    margin-right: 0;
-  }
-
   .tools li {
     width: 30.2%;
   }
 
-  .tools li:nth-child(4n), .tools li:first-child {
-    margin-left: 0;
+  .tools strong {
+    font-size: 1.3em;
   }
 
-  .tools li:nth-child(3n+3) {
-    margin-right: 0;
+  .tools span {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.5em;
+    position: relative;
+    bottom: 3em;
   }
-
-
-
 
   img.circle-image {
     border-radius: 50%;
