@@ -78,6 +78,12 @@ td { vertical-align: top; }
   h1, h2, h3, h4, h5, h6, strong {
     font-weight: normal;
   }
+
+  header {
+    margin-top: 5em;
+    margin-bottom: 2.5em;
+  }
+
   body {
     background: #131313 url(../img/assault.png) 0 0 repeat;
     color: #CAB6B5;
