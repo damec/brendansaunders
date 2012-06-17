@@ -74,6 +74,10 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
+  /** Remove bold weight for headers since they use normal weight fonts **/
+  h1, h2, h3, h4, h5, h6, strong {
+    font-weight: normal;
+  }
   body {
     background: #131313 url(../img/assault.png) 0 0 repeat;
     color: #CAB6B5;
@@ -94,6 +98,10 @@ td { vertical-align: top; }
     margin: 0.6em 0 0.3em;
   }
 
+  h1 .brendan {
+    color: #C95A54;
+  }
+
   #page-wrap {
     margin: 3em auto;
     width: 80%;
@@ -106,11 +114,11 @@ td { vertical-align: top; }
 
   dt {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 
   dd {
-    margin-left: 1.3em;
+    margin-left: 1.1em;
   }
 
   code { 
@@ -142,27 +150,38 @@ td { vertical-align: top; }
     width: 30.2%;
   }
 
-  .tools strong {
+  .work-examples strong, .tools strong {
     font-size: 1.3em;
   }
 
-  .tools span {
+  .work-examples span, .tools span {
     background: rgba(0, 0, 0, 0.8);
     padding: 0.5em;
     position: relative;
     bottom: 3em;
   }
 
-  img.circle-image {
+  .circle-image img {
     border-radius: 50%;
     -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.45);
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.45);
     max-width: 100%;
+    text-align: center;
   }
 
 
 
+/* =============================================================================
+   Utility Classes
+   ========================================================================== */
 
+  .trail {
+    font-size: 1.15em;
+  }
+
+  .center {
+    text-align: center;
+  }
 
 
 
