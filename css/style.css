@@ -137,6 +137,7 @@ td { vertical-align: top; }
 
   .work-examples, .tools {
     overflow: hidden;
+    padding: 0;
   }
 
   .third, .work-examples li, .tools li {
