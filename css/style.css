@@ -121,16 +121,17 @@ td { vertical-align: top; }
   dt {
     font-weight: bold;
     font-size: 1.3em;
+    margin-bottom: 1em;
   }
 
   dd {
-    margin-left: 1.1em;
+    margin-left: 0;
   }
 
   code { 
     color: #BAD6E3;
     background-color: #434D52;
-    padding: 0.2em 0.4em;
+    padding: 0.2em;
     border-radius: 3px;
   }
 
@@ -183,6 +184,7 @@ td { vertical-align: top; }
 
   .trail {
     font-size: 1.15em;
+    margin-bottom: 2em;
   }
 
   .center {
