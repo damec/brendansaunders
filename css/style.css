@@ -132,7 +132,7 @@ td { vertical-align: top; }
     overflow: hidden;
   }
 
-  .work-examples li, .tools li {
+  .third, .work-examples li, .tools li {
     float: left;
     list-style: none;
     margin: 1.175%;
@@ -146,7 +146,7 @@ td { vertical-align: top; }
     max-width: 100%;
   }
 
-  .tools li {
+  .third, .tools li {
     width: 30.2%;
   }
 
