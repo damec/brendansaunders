@@ -261,6 +261,10 @@ td { vertical-align: top; }
     font-size: 3em;
   }
 
+  h1 .brendan {
+    font-size: 0.9em;
+  }
+
   .third {
     width: 96.35%;
   }
