@@ -121,6 +121,13 @@ td { vertical-align: top; }
     width: 80%;
   }
 
+  h2.under-construction {
+    background: #C95A54;
+    color: #eee;
+    padding: 0.5em;
+    border-radius: 4px;
+  }
+
   h2 {
     font-size: 1.75em;
   }
@@ -223,9 +230,18 @@ td { vertical-align: top; }
    Media Queries
    ========================================================================== */
 
-@media only screen and (max-width: 650px) {
-  h1 {
-    font-size: 3.5em;
+@media only screen and (max-width: 1000px) {
+
+  dl .third {
+    width: 96.35%;
+  }
+
+  .third {
+    width: 47%;
+  }
+
+  .tools strong {
+    float: left;
   }
 }
 
