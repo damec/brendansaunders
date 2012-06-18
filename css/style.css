@@ -255,7 +255,11 @@ td { vertical-align: top; }
 
 }
 
-@media only screen and (max-width: 615px) {
+@media only screen and (max-width: 650px) {
+  
+  h1 {
+    font-size: 3em;
+  }
 
   .third {
     width: 96.35%;
