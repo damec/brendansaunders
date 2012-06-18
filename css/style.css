@@ -159,6 +159,10 @@ td { vertical-align: top; }
     padding: 0;
   }
 
+  .work-examples a, .tools a{
+    display: block;
+  }
+
   .third, .work-examples li {
     float: left;
     list-style: none;
@@ -179,6 +183,7 @@ td { vertical-align: top; }
 
   .work-examples strong, .tools strong {
     font-size: 1.3em;
+    float: left;
   }
 
   .work-examples span, .tools span {
@@ -240,9 +245,22 @@ td { vertical-align: top; }
     width: 47%;
   }
 
-  .tools strong {
-    float: left;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .work-examples li {
+    width: 96.35%;
   }
+
+}
+
+@media only screen and (max-width: 615px) {
+
+  .third {
+    width: 96.35%;
+  }
+
 }
 
 /* =============================================================================
