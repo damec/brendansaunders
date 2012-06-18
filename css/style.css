@@ -11,8 +11,8 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
-::-moz-selection { background: #C95A54; color: #fff; text-shadow: none; }
-::selection { background: #C95A54; color: #fff; text-shadow: none; }
+::-moz-selection { background: #E79A95; color: #fff; text-shadow: none; }
+::selection { background: #E79A95; color: #fff; text-shadow: none; }
 
 a { color: #00e; }
 a:visited { color: #551a8b; }
@@ -196,6 +196,11 @@ td { vertical-align: top; }
     text-align: center;
   }
 
+  hr {
+    border-top: 0.15em dotted #CAB6B5;
+    opacity: 0.3;
+    margin: 0 1.175% 2em;
+  }
 
 
 /* =============================================================================
