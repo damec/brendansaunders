@@ -259,6 +259,14 @@ td { vertical-align: top; }
     line-height: 1.65em;
   }
 
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h2 code {
+    font-size: 0.9em;
+  } 
+
   .third {
     width: 96.35%;
   }
