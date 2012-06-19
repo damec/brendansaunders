@@ -201,6 +201,7 @@ td { vertical-align: top; }
   }
 
   .circle-image img {
+    border-radius: 50%;
     -webkit-box-shadow: 2px 1px 0 rgba(255, 255, 255, 0.15);
     box-shadow: 2px 1px 0 rgba(255, 255, 255, 0.15);
     max-width: 100%;
