@@ -203,7 +203,7 @@ td { vertical-align: top; }
   .circle-image img {
     border-radius: 50%;
     -webkit-box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.45);
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.45);
+    box-shadow: 2px 1px 0 rgba(255, 255, 255, 0.15);
     max-width: 100%;
     text-align: center;
   }
