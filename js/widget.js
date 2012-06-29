@@ -1,7 +1,7 @@
 //Anonymous function to avoid interference
 (function() {
 
-	var storeResults = $.getJSON("http://api.storenvy.com/v1/grooveshark.json?api_key=unicorn_sandwich&callback=processStoreResults");
+	var storeResults = $.get("http://api.storenvy.com/v1/grooveshark.json?api_key=unicorn_sandwich&callback=processStoreResults");
 	
 	function processStoreResults(response) {
 	  var storeName = response.store.name;
