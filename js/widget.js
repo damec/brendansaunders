@@ -39,13 +39,13 @@
 	function startStore() { 
 	    jQuery(function ($) {
 
-	    	////attach css
-	    	//var cssLink = $("<link>", { 
-    		//	rel: "stylesheet", 
-    		//	type: "text/css", 
-    		//	href: "css/widget/store.css" 
-				//});
-				//cssLink.appendTo('head');
+	    	//attach css
+	    	var cssLink = $("<link>", { 
+    			rel: "stylesheet", 
+    			type: "text/css", 
+    			href: "http://brendansaunders.me/css/widget/store.css" 
+				});
+				cssLink.appendTo('head');
 
 	    	var $storeContainer = $("#store");
 	    	var subdomain = $storeContainer.data("subdomain");
