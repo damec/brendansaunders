@@ -57,7 +57,6 @@
 				// call out to the api and build html on response
 				var apiCall = $.getJSON(storeResultsUrl, function(response) {
 					var store = response.store;
-					console.log(store);
 					var products = store.products;
 					var limit;
 					var productTmpl = "<li class='product'><div class='front'></div><div class='back'></div></li>";
