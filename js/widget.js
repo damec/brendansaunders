@@ -46,7 +46,8 @@
     			href: "http://brendansaunders.me/css/widget/store.css" 
 				});
 				cssLink.appendTo('head');
-
+				var $widgetContainer = $("#storenvy-widget");
+				$widgetContainer.append("<div id='store'");
 	    	var $storeContainer = $("#store");
 	    	var subdomain = $storeContainer.data("subdomain");
 	    	var productsLimit = $storeContainer.data("limit");
@@ -61,7 +62,7 @@
 					var limit;
 					var productTmpl = "<li class='product'><div class='front'></div><div class='back'></div></li>";
 					//console.log(store);
-
+					
 					//start appending the html
 					$storeContainer.append("<h3 class='header'><img class='avatar' src='" + store.avatar + "' title='" + store.name + "' alt='" + store.name + " user avatar'><span>" + store.name + "</span><span><a class='store-link' href='" + store.url + "'>Visit Store</a></span></h3>")
     			      				 .append("<ul id='product-gallery'>");
