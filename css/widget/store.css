@@ -1,9 +1,12 @@
+body {
+  margin: 0;
+  padding: 0; }
+
 #store {
-  background: #c5e8fa url(http://www.storenvy.com/images/bgs/linen-tiled.png) 0 0 repeat;
   border: 1px solid #B3C7D0;
   border-radius: 6px;
   font-family: "Helvetica", "Arial", sans-serif;
-  height: 600px;
+  height: 598px;
   width: 480px; }
   #store .header {
     background: #f3f6eb url(http://www.storenvy.com/images/browse/br_header_bg.png) 0 0 repeat-x;
@@ -12,7 +15,6 @@
     margin: 0;
     overflow: hidden;
     padding: 0.8em;
-    position: fixed;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.9); }
     #store .header img.avatar {
       border: 1px solid #7a7a7a;
@@ -37,25 +39,31 @@
         background: #17A7EA; }
       #store .header .store-link:active {
         background: #0081CB; }
-  #store #product-gallery {
+  #store #products-container {
+    background: #c5e8fa url(http://www.storenvy.com/images/bgs/linen-tiled.png) 0 0 repeat;
+    border-radius: 0 0 6px 6px;
     -webkit-box-shadow: inset 2px 2px 8px rgba(112, 125, 131, 0.3);
-    border-radius: 0 0 5px 5px;
     box-shadow: inset 2px 2px 6px rgba(112, 125, 131, 0.3);
-    height: 528px;
+    height: 484px;
+    overflow: auto;
+    padding: 4.75%; }
+  #store #product-gallery {
+    border-radius: 0 0 5px 5px;
     margin: 0;
-    overflow: scroll;
-    padding: 0;
-    padding-right: 4.75%; }
+    overflow: auto;
+    padding: 0; }
     #store #product-gallery > li.product {
       float: left;
       height: 207px;
       list-style: none;
-      margin: 0 0 4.75% 4.75%;
+      margin: 0  4.75% 4.75% 0;
       -webkit-perspective: 800px;
       -moz-perspective: 800px;
       perspective: 800px;
       position: relative;
       width: 207px; }
+      #store #product-gallery > li.product:nth-child(even) {
+        margin-right: 0; }
       #store #product-gallery > li.product:hover .back, #store #product-gallery > li.product:hover .front {
         transform-style: preserve-3d;
         transition: all .6s ease-in-out; }

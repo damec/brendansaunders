@@ -73,7 +73,7 @@
 					
 					//start appending the html
 					$storeContainer.append("<h3 class='header'><img class='avatar' src='" + store.avatar + "' title='" + store.name + "' alt='" + store.name + " user avatar'><span>" + store.name + "</span><span><a class='store-link' href='" + store.url + "'>Visit Store</a></span></h3>")
-    			      				 .append("<ul id='product-gallery'>");
+    			      				 .append("<div id='products-container'><ul id='product-gallery'></div>");
 
     			//check to see if a limit was specified
     			if (productsLimit) {
@@ -105,14 +105,8 @@
           	html += "</form>";
     				html += "</div>";  
     				html += "</li>";
-    				$storeContainer.children("#product-gallery").append(html);
+    				$storeContainer.find("#product-gallery").append(html);
     			}
-    			// if odd number of products, show callout tile
-    			if (limit % 2) {
-    				var html = "<li class='product callout'></div>";
-    				$storeContainer.children("#product-gallery").append(html);
-    			}
-
 				});
 
 	    });
