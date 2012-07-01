@@ -3,6 +3,7 @@
 	border: 1px solid #B3C7D0;
 	border-radius: 6px;
 	font-family: "Helvetica", "Arial", sans-serif;
+	height: 600px;
 	width: 480px;
 
 	.header {
@@ -12,6 +13,7 @@
 		margin: 0;
 		overflow: hidden;
 		padding: 0.8em;
+		position: fixed;
 		text-shadow: 1px 1px 0 rgba(255,255,255,0.9);
 
 		img.avatar {
@@ -52,18 +54,17 @@
 		-webkit-box-shadow: inset 2px 2px 8px rgba(112, 125, 131, 0.3);
 		border-radius: 0 0 5px 5px;
 		box-shadow: inset 2px 2px 6px rgba(112, 125, 131, 0.3);
+		height: 528px;
 		margin: 0;
-		max-height: 100%;
-		overflow: auto;
+		overflow: scroll;
 		padding: 0;
-		padding-bottom: 4.75%;
 		padding-right: 4.75%;
 
 		& > li.product {
 			float: left;
 			height: 207px;
 			list-style: none;
-			margin: 4.75% 0 0 4.75%;
+			margin: 0 0 4.75% 4.75%;
 			-webkit-perspective: 800px;
 			-moz-perspective: 800px;
 			perspective: 800px;
@@ -155,16 +156,16 @@
 						margin: 0.2em;
 					}
 				}
-
-				form {
-					bottom: 1em;
-					position: absolute;
-					width: 100%;
-				}
-
 			}
 		}
 	}
+
+	.add-to-cart-form {
+		bottom: 1em;
+		position: absolute;
+		width: 100%;
+	}
+
 	.add-to-cart-button {
 		background-color: #086699;
 		background-image: -webkit-linear-gradient(top, #26C6FC, #1C97CD);

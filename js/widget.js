@@ -39,18 +39,26 @@
 	function startStore() { 
 	    jQuery(function ($) {
 
+	    	var $widgetContainer = $("#storenvy-widget");
+	    	var iframe = $widgetContainer[0].contentWindow.document;
+	    	iframe.open();
+	    	iframe.close();
+
+	    	$("head").append("<style> #storenvy-widget { display: block; border: 0; margin: 0 auto; outline: 0; padding: 0;}</style>");
+
 	    	//attach css
 	    	var cssLink = $("<link>", { 
     			rel: "stylesheet", 
     			type: "text/css", 
     			href: "http://brendansaunders.me/css/widget/store.css" 
 				});
-				cssLink.appendTo('head');
-				var $widgetContainer = $("#storenvy-widget");
-				$widgetContainer.append("<div id='store'");
-	    	var $storeContainer = $("#store");
-	    	var subdomain = $storeContainer.data("subdomain");
-	    	var productsLimit = $storeContainer.data("limit");
+				
+				$("head", iframe).append(cssLink);
+				$("body", iframe).append("<div id='store'></div>");
+
+	    	var $storeContainer = $("#store", iframe);
+	    	var subdomain = $widgetContainer.data("subdomain");
+	    	var productsLimit = $widgetContainer.data("limit");
 
 	    	// build the API call
 	    	var storeResultsUrl = "http://api.storenvy.com/v1/" + subdomain + ".json?api_key=unicorn_sandwich&callback=?";
@@ -92,7 +100,7 @@
 								html += "<option value='" + products[i].variants[v].id + "'>" + products[i].variants[v].name + "</option>";
 							}
 						}
-    				html += "</select><br>";
+    				html += "</select><br/>";
             html += "<input type='submit' class='add-to-cart-button' value='Add to Cart'/>";
           	html += "</form>";
     				html += "</div>";  
