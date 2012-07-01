@@ -50,7 +50,7 @@
 	    	var cssLink = $("<link>", { 
     			rel: "stylesheet", 
     			type: "text/css", 
-    			href: "css/widget/store.css" 
+    			href: "http://brendansaunders.me/css/widget/store.css" 
 				});
 				
 				$("head", iframe).append(cssLink);
