@@ -50,7 +50,7 @@
 	    	var cssLink = $("<link>", { 
     			rel: "stylesheet", 
     			type: "text/css", 
-    			href: "http://brendansaunders.me/css/widget/store.css" 
+    			href: "css/widget/store.css" 
 				});
 				
 				$("head", iframe).append(cssLink);
@@ -66,6 +66,7 @@
 				// call out to the api and build html on response
 				var apiCall = $.getJSON(storeResultsUrl, function(response) {
 					var store = response.store;
+					console.log(store);
 					var products = store.products;
 					var limit;
 					var productTmpl = "<li class='product'><div class='front'></div><div class='back'></div></li>";
@@ -85,26 +86,32 @@
     			}
     			for ( i=0; i<limit; i++) {
     				var html = "";
-    				html += "<li class='product'>";
-    				html += "<div class='front'>";
-  					html += "<img src='" + products[i].photos[0].medium + "' />";
-  					html += "<span class='price'>" + products[i].price + "</span>";
-  					html += "</div><div class='back'>";
-  					html += "<span class='price'>" + products[i].price + "</span>";
-  					html += "<div class='details'><strong>" + products[i].name + "</strong><p>" + products[i].category + "</p></div>";
-  					html += "<form class='add-to-cart-form' action='https://www.storenvy.com/cart' method='post' target='_blank'>";
-    				html += "<select name=variant_id id=" + products[i].id + ">";
-						for ( v=0; v<products[i].variants.length; v++) {
-							// make sure there is stock
-							if (products[i].variants[v].quantity > 0) {
-								html += "<option value='" + products[i].variants[v].id + "'>" + products[i].variants[v].name + "</option>";
-							}
-						}
-    				html += "</select><br/>";
-            html += "<input type='submit' class='add-to-cart-button' value='Add to Cart'/>";
-          	html += "</form>";
-    				html += "</div>";  
-    				html += "</li>";
+    				// hide sold out products
+    				if( !products[i].sold_out ) {
+    					html += "<li class='product'>";
+    					html += "<div class='front'>";
+  						html += "<img src='" + products[i].photos[0].medium + "' />";
+  						html += "<span class='price'>" + products[i].price + "</span>";
+  						html += "</div><div class='back'>";
+  						html += "<span class='price'>" + products[i].price + "</span>";
+  						html += "<div class='details'><strong>" + products[i].name + "</strong><p>" + products[i].category + "</p></div>";
+  						html += "<form class='add-to-cart-form' action='https://www.storenvy.com/cart' method='post' target='_blank'>";
+  						// hide dropdown if only one variant
+  						if ( products[i].variants.length > 1 ) {
+    						html += "<select name=variant_id id=" + products[i].id + ">";
+								for ( v=0; v<products[i].variants.length; v++) {
+									// make sure there is stock
+									if (products[i].variants[v].quantity > 0) {
+										html += "<option value='" + products[i].variants[v].id + "'>" + products[i].variants[v].name + "</option>";
+									}
+								}
+    						html += "</select><br/>";
+    					}
+            	html += "<input type='submit' class='add-to-cart-button' value='Add to Cart'/>";
+          		html += "</form>";
+    					html += "</div>";  
+    					html += "</li>";
+    				}
     				$storeContainer.find("#product-gallery").append(html);
     			}
 				});
