@@ -1,12 +1,12 @@
 #store {
-  background: #c5e8fa url(http://www.storenvy.com/images/bgs/linen-tiled.png?1340933447) 0 0 repeat;
+  background: #c5e8fa url(http://www.storenvy.com/images/bgs/linen-tiled.png) 0 0 repeat;
   border: 1px solid #B3C7D0;
   border-radius: 6px;
   font-family: "Helvetica", "Arial", sans-serif;
   height: 600px;
   width: 480px; }
   #store .header {
-    background: #f3f6eb url(http://www.storenvy.com/images/browse/br_header_bg.png?1340933447) 0 0 repeat-x;
+    background: #f3f6eb url(http://www.storenvy.com/images/browse/br_header_bg.png) 0 0 repeat-x;
     border-radius: 6px 6px 0 0;
     color: #7a7a7a;
     margin: 0;
@@ -104,7 +104,7 @@
         -ms-transform: rotateY(0deg);
         transform: rotateY(0deg); }
       #store #product-gallery > li.product .back {
-        background: #444444 url(http://www.storenvy.com/images/popup-shop/crosshatch-bg.png?1340933447) 0 0 no-repeat;
+        background: #444444 url(http://www.storenvy.com/images/popup-shop/crosshatch-bg.png) 0 0 no-repeat;
         color: #ededed;
         font-size: 18px;
         text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
