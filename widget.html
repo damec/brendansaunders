@@ -3,10 +3,36 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Storenvy Widget</title>
+	<title>Storenvy Widget Builder</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <style type="text/css">
+    .navbar.navbar-fixed-top a.brand {
+      background: transparent url(http://www.storenvy.com/images/embed/logo.png) 0 0 no-repeat;
+      background-size: 100%;
+      padding: 0 !important;
+      margin: 7px 0 0 20px !important;
+      font-weight: bold;
+      height: 60px;
+      width: 200px;
+      color: black;
+      text-indent: -9999px;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .125);
+    }
+    .tagline {
+      color: #eaeaea;
+      display: block;
+      font-size: 18px;
+      line-height: 67px;
+      margin: 0 0 0 -20px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+  </style>
 
   <script type="text/javascript">
 
@@ -22,8 +48,51 @@
 </script>
 </head>
 <body>
-  <div id="page-wrap">
-    
-  </div><!-- /#page-wrap-->   
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand pull-left">Storenvy</a>
+        <span class="tagline pull-left">Mini-store builder</span>
+      </div>
+    </div>
+  </div>
+  <div class="well">
+    <form class="form-horizontal" id="widget-builder">
+      <fieldset>
+        <legend>Build your Storenvy mini-store</legend>
+        <div class="control-group">
+          <label class="control-label" for="subdomain">Storenvy Subdomain</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="subdomain">
+            <p class="help-block">examples: grooveshark, portmanteau, workerman</p>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="limit">Products Limit</label>
+          <div class="controls">
+            <input type="text" class="input-small" id="limit">
+            <p class="help-block">This limits the amount of products that show up in your mini-store</p>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <input type="submit" action="/" method="POST" class="btn btn-primary" id="submit-form" value="Generate Code" />
+          </div>
+        </div>
+        <hr>
+        <div class="control-group">
+          <label class="control-label" for="snippet">Snippet Code</label>
+          <div class="controls">
+            <textarea class="input-xlarge" id="snippet"></textarea>
+            <p class="help-block">Paste this snippet into page to display your mini-store</p>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+  <script src="js/script.js"></script>
 </body>
 </html>
