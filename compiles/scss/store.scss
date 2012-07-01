@@ -7,8 +7,20 @@ body{
 	border: 1px solid #B3C7D0;
 	border-radius: 6px;
 	font-family: "Helvetica", "Arial", sans-serif;
-	height: 598px;
+	max-height: 598px;
 	width: 480px;
+
+	a {
+		color: #85AAC0;
+		text-decoration: none;
+		&:hover {
+			color: #17A7EA;
+		}
+
+		&:active {
+			color: #0081CB;
+		}
+	}
 
 	img	{
 		max-width: 100%;
@@ -62,10 +74,11 @@ body{
 		border-radius: 0 0 6px 6px;
 		-webkit-box-shadow: inset 2px 2px 8px rgba(112, 125, 131, 0.3);
 		box-shadow: inset 2px 2px 6px rgba(112, 125, 131, 0.3);
-		height: 484px;
+		max-height: 484px;
 		overflow: auto;
 		padding: 4.75%;
 		padding-right: 0;
+		padding-bottom: 0;
 	}
 
 	#product-gallery {
@@ -75,15 +88,48 @@ body{
 		padding: 0;
 
 		li.product {
+			-webkit-perspective: 500px;
+			-moz-perspective: 500px;
+			perspective: 500px;
+		}
+		li.product, li.visit {
 			float: left;
 			height: 207px;
 			list-style: none;
 			margin: 0  4.75% 4.75% 0;
-			-webkit-perspective: 500px;
-			-moz-perspective: 500px;
-			perspective: 500px;
 			position: relative;
 			width: 207px;
+		}
+		li.visit .overlay {
+			background: rgba(0,0,0,0.6);
+			color: white;
+			font-size: 30px;
+			font-weight: bold;
+			padding: 0.4em 0.8em;
+			text-align: center;
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+
+			a {
+				color: #eee;
+				border-bottom: 1px solid #eee;
+				font-size: 22px;
+				padding-bottom: 0.125em;
+
+				&:hover {
+					color: #17A7EA;
+					border-color: #17A7EA;
+				}
+		
+				&:active {
+					color: #0081CB;
+					border-color: #0081CB;;
+				}
+			}
 		}
 	}
 
@@ -206,6 +252,21 @@ body{
 			background-image: -o-linear-gradient(top, #086699, #065078);
 			background-image: -ms-linear-gradient(top, #086699, #065078);
 			background-image: linear-gradient(top, #086699, #065078);
+		}
+	}
+	#product-gallery .no-results {
+		background: white url(http://www.storenvy.com/images/embed/bg_f5_50.png) 0 0 repeat;
+		border-radius: 4px;
+		border: 1px solid #CFCFCF;
+		color: #363636;
+		font-size: 16px;
+		margin: 0;
+		margin-right: 4.75%;
+		margin-bottom: 4.75%;
+		padding: 2%;
+
+		strong {
+			font-size: 18px;
 		}
 	}
 }
