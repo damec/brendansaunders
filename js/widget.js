@@ -61,14 +61,20 @@
 				$("body", iframe).append("<div id='store'></div>");
 
 	    	var $storeContainer = $("#store", iframe);
-	    	var subdomain = $widgetContainer.data("subdomain");
-	    	var productsLimit = $widgetContainer.data("limit");
+	    	//var subdomain = $widgetContainer.data("subdomain");
+	    	//var productsLimit = $widgetContainer.data("limit");
 
 	    	// build the API call
-	    	var storeResultsUrl = "http://api.storenvy.com/v1/" + subdomain + ".json?api_key=unicorn_sandwich&callback=?";
-				
+	    	// var storeResultsUrl = "http://api.storenvy.com/v1/" + subdomain + ".json?api_key=unicorn_sandwich&callback=?";
+	    	// replaced with static endpoint with respect to storenvy
+
 				// call out to the api and build html on response
-				var apiCall = $.getJSON(storeResultsUrl, function(response) {
+				var apiCall = $.getJSON({
+					url: "http://jollyrogerltd.com/js/grooveshark.json",
+					dataType: 'jsonp',
+					jsonpCallback: 'runStore', 
+					success: function(response) {
+					console.log(response);
 					var store = response.store;
 					var products = store.products;
 					var limit;
@@ -135,7 +141,7 @@
     				$storeContainer.find("#product-gallery").append(html);
     				html = "";
     			}
-				}); // end apiCall()
+				}}); // end apiCall()
 
 	    }); // end jQuery domReady()
 	} // end startStore()
